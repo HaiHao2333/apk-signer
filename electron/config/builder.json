@@ -1,0 +1,54 @@
+{
+  "productName": "ApkSigner",
+  "appId": "com.sy.ApkSigner",
+  "copyright": "© 2023 Sy Technology Co., Ltd.",
+  "directories": {
+    "output": "out"
+  },
+  "asar": true,
+  "files": [
+    "**/*",
+    "!frontend/",
+    "!run/",
+    "!logs/",
+    "!data/"
+  ],
+  "extraResources": {
+    "from": "build/extraResources/",
+    "to": "extraResources"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "installerIcon": "build/icons/icon.ico",
+    "uninstallerIcon": "build/icons/icon.ico",
+    "installerHeaderIcon": "build/icons/icon.ico",
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "ApkSigner"
+  },
+  "mac": {
+    "icon": "build/icons/icon.icns",
+    "artifactName": "${productName}-${os}-${version}-${arch}.${ext}",
+    "darkModeSupport": true,
+    "hardenedRuntime": false
+  },
+  "win": {
+    "icon": "build/icons/icon.ico",
+    "artifactName": "${productName}-${os}-${version}-${arch}.${ext}",
+    "target": [
+      {
+        "target": "nsis"
+      }
+    ]
+  },
+  "linux": {
+    "icon": "build/icons/icon.icns",
+    "artifactName": "${productName}-${os}-${version}-${arch}.${ext}",
+    "target": [
+      "deb"
+    ],
+    "category": "Utility"
+  }
+}

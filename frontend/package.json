@@ -1,0 +1,26 @@
+{
+  "name": "ee",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --host --port 10086",
+    "serve": "vite --host --port 10086",
+    "build-staging": "vite build --mode staging",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "element-plus": "^2.3.14",
+    "mitt": "^3.0.1",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14",
+    "vue3-eventbus": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.2.33",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "terser": "^5.19.1",
+    "vite": "^4.4.4"
+  }
+}
